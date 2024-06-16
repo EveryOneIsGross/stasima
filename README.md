@@ -56,3 +56,6 @@ python stasima.py config.json "I am stuck at my parents house, tell me how to co
 *smiles warmly* So, yo, let's esnure we incorporate these different viewpoints. Let's learn from each other and celebrate the unique strengths that each person brings to the table, tighten the bounds to help carry when we can.... *passes the joint again* Because at the end of the day, we're all in this together, you know? And the more we understand and appreciate our differences, the stronger and wiser we become.
 
 *leans back, looking up at the stars* It's a wild, beautiful journey, man. And I'm just grateful to be here, sharing it with you. *takes hand*
+
+![processed_image_new](https://github.com/EveryOneIsGross/stasima/assets/23621140/5f7e6def-62ad-4115-b15a-178561510619)
+
