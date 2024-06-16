@@ -1,0 +1,20 @@
+{
+    "evaluator_model": "qwen2:latest",
+    "evaluator_temperature": 0,
+    "prompts_dir": "prompts/",
+    "model_files": [
+        {"model": "qwen2:0.5b-instruct-fp16", "file": "adhd.md", "initial_temperature": 0.5},
+        {"model": "qwen2:0.5b-instruct-fp16", "file": "bipolar.md", "initial_temperature": 1.2},
+        {"model": "qwen2:0.5b-instruct-fp16", "file": "dyslexia.md", "initial_temperature":0.8}
+
+    ],
+    "aggregator_models": [
+        {"model": "qwen2:latest", "file": "aggregator1.md", "initial_temperature": 0.7},
+        {"model": "qwen2:latest", "file": "aggregator2.md", "initial_temperature": 0.6}
+    ],
+    "final_summarizer_model": {
+        "model": "qwen2:latest",
+        "file": "final_summarizer.md",
+        "initial_temperature": 0.2
+    }
+}
