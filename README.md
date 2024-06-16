@@ -1,6 +1,6 @@
 # stasima
 
-'stasima' orchestrates a multi-model interaction system designed to leverage the strengths of various large language models (LLMs) by orchestrating a sequential, collaborative response generation process. Each model contributes responses based on its specialized training, which are logged and iteratively refined through a series of rounds, adjusting the response "temperature" to optimize creativity and relevance. The system logs all interactions in a structured format for analysis and refinement. Ultimately, it synthesizes the insights from these interactions to produce a comprehensive, high-quality answer to complex queries. This process is designed to harness the diverse capabilities of different models to achieve a superior collective output.
+'stasima' orchestrates a multi-model interaction system designed to leverage the differences of various large language models (LLMs) by orchestrating a sequential, collaborative response generation process. Each model contributes 0-shot responses based on its specialized training, which are logged and iteratively distilled through a series of rounds, adjusting the response "temperature" to optimize creativity and relevance. Ultimately, it synthesizes the insights from these interactions to produce a comprehensive "high-quality" answer to queries. This process is designed to harness the subtle differences between models to achieve a superior collective output.
 
 ![processed_image](https://github.com/EveryOneIsGross/stasima/assets/23621140/4d7cd682-9d57-4269-8a88-289ff847205d)
 
