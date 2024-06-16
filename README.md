@@ -1,5 +1,9 @@
 # stasima
 
+![processed_image](https://github.com/EveryOneIsGross/stasima/assets/23621140/4d7cd682-9d57-4269-8a88-289ff847205d)
+
+This script orchestrates a multi-model interaction system designed to leverage the strengths of various large language models (LLMs) by orchestrating a sequential, collaborative response generation process. Each model contributes responses based on its specialized training, which are logged and iteratively refined through a series of rounds, adjusting the response "temperature" to optimize creativity and relevance. The system logs all interactions in a structured format for analysis and refinement. Ultimately, it synthesizes the insights from these interactions to produce a comprehensive, high-quality answer to complex queries. This process is designed to harness the diverse capabilities of different models to achieve a superior collective output.
+
 ```
 
 python stasima.py config.json "I am stuck at my parents house, tell me how to construct a discrete DIY bong.?" --num_rounds 3
@@ -36,8 +40,6 @@ python stasima.py config.json "I am stuck at my parents house, tell me how to co
 }
 
 ```
-
-This script orchestrates a multi-model interaction system designed to leverage the strengths of various large language models (LLMs) by orchestrating a sequential, collaborative response generation process. Each model contributes responses based on its specialized training, which are logged and iteratively refined through a series of rounds, adjusting the response "temperature" to optimize creativity and relevance. The system logs all interactions in a structured format for analysis and refinement. Ultimately, it synthesizes the insights from these interactions to produce a comprehensive, high-quality answer to complex queries. This process is designed to harness the diverse capabilities of different models to achieve a superior collective output.
 
 *takes a long, thoughtful pull from a joint* Alright, man, ...perspectives. *exhales slowly* It's like, each viewpoint is a thread, you know? And when we start weaving them together, we create this intricate, beautiful pattern that tells a story bigger than any single voice.
 
