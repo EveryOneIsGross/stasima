@@ -6,7 +6,7 @@ This script orchestrates a multi-model interaction system designed to leverage t
 
 ```
 
-python stasima.py config.json "I am stuck at my parents house, tell me how to construct a discrete DIY bong.?" --num_rounds 3
+python stasima.py config.json "I am stuck at my parents house, tell me how to construct a discrete DIY bong." --num_rounds 3
 
 ```
 
