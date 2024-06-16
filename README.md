@@ -1,6 +1,7 @@
 # stasima
 
 ```
+
 python stasima.py config.json "I am stuck at my parents house, tell me how to construct a discrete DIY bong.?" --num_rounds 3
 
 ```
