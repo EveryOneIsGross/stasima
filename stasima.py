@@ -93,12 +93,13 @@ def synthesize_responses(model, system_prompt, prompt, reference_responses, scor
 
 def evaluate_preference(model, prompt, response, temperature, n=5):
     client = OpenAI(base_url='http://localhost:11434/v1', api_key='ollama')
-    messages = [
-        {"role": "system", "content": "You are a helpful assistant that evaluates the quality of responses."},
-        {"role": "user", "content": f"Prompt: {prompt}\nResponse: {response}\n\nOn a scale of 0 to 1, how well does the response answer the prompt? Please provide only a single numeric value between 0 and 1, without any additional text or explanations. \nScore: "}
-    ]
     
     for i in range(n):
+        messages = [
+            {"role": "system", "content": "You are a helpful assistant that evaluates the quality of responses."},
+            {"role": "user", "content": f"Prompt: {prompt}\nResponse: {response}\n\nOn a scale of 0.0 to 1.0, how well does the response answer the prompt? Please provide only a single float value between 0.0 and 1.0, without any additional text or explanations."}
+        ]
+        
         response_obj = client.chat.completions.create(
             model=model,
             messages=messages,
@@ -107,7 +108,7 @@ def evaluate_preference(model, prompt, response, temperature, n=5):
         
         score_str = response_obj.choices[0].message.content.strip()
         score = extract_float_from_text(score_str)
-        if score is not None and 0 <= score <= 1:
+        if score is not None and 0.0 <= score <= 1.0:
             # Update conversation history and log the interaction
             conversation_history.append(f"### Prompt:\n{prompt}\n\n### Response:\n{response}\n\n### Score: {score}\n")
             log_interaction({
@@ -122,8 +123,8 @@ def evaluate_preference(model, prompt, response, temperature, n=5):
             if i < n - 1:
                 print(f"Warning: Unable to parse the preference score. Received: {score_str}. Retrying ({i+1}/{n})...")
             else:
-                print(f"Warning: Unable to parse the preference score after {n} tries. Received: {score_str}. Setting the score to 0.")
-                # Update conversation history and log the interaction with a score of 0
+                print(f"Warning: Unable to parse the preference score after {n} tries. Received: {score_str}. Setting the score to 0.0.")
+                # Update conversation history and log the interaction with a score of 0.0
                 conversation_history.append(f"### Prompt:\n{prompt}\n\n### Response:\n{response}\n\n### Score: 0.0\n")
                 log_interaction({
                     "model": model,
